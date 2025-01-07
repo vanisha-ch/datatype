@@ -1,0 +1,25 @@
+DATA TYPES:
+1)Dynamic type language
+1)primitive datatype (stores single value)
+2)Non-primitive data types :objects,Arrays
+To check data type ujse -typeof
+ 1)primitive data type :predefined ;we can store single vales
+1) Numbers:integers,floats
+2)String: characters enclosed in single and double,backtick quotes;
+3)boolean:true or false
+4)null:empty
+5)undefined: declared variable with no values
+
+String Concatnation:
+ a=sai
+b=kumar
+age =30
+let c =
+let a="Reactjs"
+    let b="sai kumar"
+    console.log(${a}=${b})
+    document.write(${a}=${b})
+/let a = "sai";
+      //let b = "kumar";
+      //document.write(`React js student  =  ${a + " " + b} `);
+      //console.log(`React js student  =  ${a + " " + b}`);
