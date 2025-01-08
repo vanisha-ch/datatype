@@ -1,0 +1,35 @@
+let a = 5;
+      let b = 2;
+      a += 40;
+      b -= 5;
+      document.write(a, "<br>");
+      document.write(b, "<br>");
+      document.write(a / b, "<br>");
+      document.Write(a % b);
+
+logical operators
+
+
+          let a = 2;
+          let b = 2;
+      //a += 40;
+      //b -= 5;
+      document.write(a > b && a > 2, "<br>");
+      document.write(a > b || a > 12, "<br>");
+      document.write(a || ba > 12, "<br>");
+      document.Write(a > 12, "<br>");
+
+Relational (comparison)values:
+<> ==,>,< !=
+
+ let t = 40;
+      let r = t > 25 ? "AC-off" : "Ac-on";
+      document.write(r);let a1 = prompt();
+      document.write(a1, "<br>");
+      document.write(typeof a1, "<br>");
+      let a2 = prompt();
+      document.write(a1 + a2, "<br>");
+    
+
+
+
