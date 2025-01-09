@@ -1,0 +1,33 @@
+conditional statement:
+to make set of instructions excecute only when given condition is true
+Block of code:
+set of instructions
+it will be excuted only when that specific condition is true
+
+>condition:An expression that evaluates an result (true or false)
+
+ex:console.log(5>6)
+
+ if:only one possible condition
+when condition is true it will be executed else skip
+
+syntax:
+if-condition
+
+<script>
+      let a = 11;
+      let b = 10;
+      //5<10
+      if (b > a) {
+        document.write("hi cse", "<br>");
+      }
+      document.write("mru");
+    </script>
+script>
+      let a = prompt("enter the score of player1");
+      let b = prompt("enter score of player2");
+      if ( a > 200 || b < 400 && a+b=500) {
+        alert(" team can build");
+      } else {
+        alert("team cant build");
+
