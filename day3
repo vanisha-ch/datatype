@@ -1,0 +1,25 @@
+//let num = prompt("enter number:");
+      //if (num % 2>0 && num % 3<=6) {
+      //document.write("number divisible by 2 and 3 both");
+      //} else {
+      // document.write("its' not divisible by 2 and 3");
+      //}
+      //let a = prompt("enter a number:");
+      //let b = prompt("enter a number:");
+      //let c = prompt("enter a number:");
+      //if (a > b && a > c) {
+      //document.write("a greater b and c");
+      //} else if (b < a && b < c) {
+      // document.write("b largest a and c:");
+      //} else {
+      // document.write("b largest a and b:");
+      //}
+      let totaldays = prompt("Enter total number of days");
+      //let present = prompt("enterdays present?");
+      let absent = prompt("enter days absent?");
+      let percentage = prompt("present/totaldays") * 100;
+      if (percentage >= 75) {
+        document.write(" Eligible to write exam");
+      } else {
+        document.write("Not eligible tow rite exam");
+      }
