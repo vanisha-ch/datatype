@@ -31,3 +31,6 @@ script>
       } else {
         alert("team cant build");
 
+let a = parseInt(prompt("Enter the number of students:"));
+      let b = (a * (a - 1)) / 2;
+      document.write("Total number of handshakes are: " + b);
