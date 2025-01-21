@@ -1,0 +1,16 @@
+*const a = "vaishu";
+      //for (let i in a) {
+      // console.log(a[i]);
+      //  }
+      //const a = ["vaihsu", "sow", "maggie"];
+      //for (let i in a) {
+      //console.log(a[i]);
+      // }
+      let i = 1;
+      a = 8;
+      for (let i = 1; i <= 8; i = i++) {
+        if (i >= 4) {
+          break;
+        }
+        console.log(i);
+      }
