@@ -1,0 +1,72 @@
+// console.log(sum(6 , 3));
+      //*let c = () => {
+        console.log("hi vanisha");
+      };
+      c()
+    </script> -->
+    <!-- <script>
+      let x = (x, y) => {
+        console.log(x + y);
+      };
+      x(20, 30);
+      x(40, 50);
+    </script> -->
+    <!-- <script>
+      let greet=x=greet=>console.log(x)
+      greet('hello')
+    </script> -->
+    <!-- <script
+    let greet=()=>console.log("hello")
+    greet()
+
+  </script> -->
+    <!-- <script>
+      let age = 18;
+      let welcome = age < 18 ?
+      () => console.log("hi"):
+       () => console.log("grp7");
+      welcome();
+    </script> -->
+    <!-- <script>
+      function task1() {
+        console.log("Task1:start");
+      }
+      function task2() {
+        console.log("Task2:start");
+      }
+      function task3() {
+        console.log("Task3:start");
+      }
+      task1();
+      task2();
+      task3();
+    </script> -->
+    <!-- <script>
+      console.log("mallareddyuniversity");
+      setTimeout(() => {
+        //built in function
+        console.log("hi im waiting");
+      }, 6000);
+      console.log("im in lab");
+    </script> -->
+    <!-- <script>
+      function greet(name, callback) {
+        console.log("hello,${name}!");
+        callback();
+      }
+      function saygoodbye()=>{
+        console.log("goodbye");
+      }
+      greet("sam", saygoodbye);
+    </script> -->
+    <!-- promise three  : -->
+    <script>
+      let mypromise = new promise((resolve, reject) => {
+        let success = true;
+        if (success) {
+          resolve("task complted");
+        } else {
+          reject("task failed");
+        }
+      });
+    </script>
