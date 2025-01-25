@@ -1,0 +1,63 @@
+ <!-- <script>
+      function mainfunction(callback) {
+        console.log("Executing main function");
+        callback();
+      }
+      function callbackfunction() {
+        console.log("callback function exceuted");
+      }
+      mainfunction(callbackfunction);
+    </script> -->
+    <!-- <script>
+      function greet(name, callback) {
+        console.log("hello" + name);
+        callback();
+      }
+      function goodbye() {
+        console.log("goodbye!");
+      }
+      greet("pavani", goodbye);
+    </script> -->
+    <!-- <script>
+      function greet(name, callback) {
+        console.log("hello " + name);
+        callback();
+      }
+
+      greet("pavani", function () {
+        console.log("goodbye!");
+      });
+    </script> -->
+    <!-- <script>
+      function fetchData(callback) {
+        document.write("Fetching data from the server... <br>");
+        setTimeout(function () {
+          document.write("Data fetched successfully!<br>");
+          callback();
+        }, 2000);
+      }
+      function processData() {
+        document.write("Processing the fetched data... <br>");
+      }
+      fetchData(processData);
+    </script> -->
+    <!-- <script>
+      const numbers = [1, 2, 3, 4, 5];
+      const d = numbers.map(function (num) {
+        return num * 2;
+      });
+      console.log(d);
+    </script> -->
+    <script>
+      function registeruser(username, email, callback) {
+        console.log("registering user" + username);
+        setTimeout(function () {
+          console.log("user" + username + "registered succesfully");
+          callback(email);
+        }, 2000);
+      }
+      function sendWelcomeEmail(email) {
+        console.log("sending welcome email to" + email);
+      }
+      registeruser("Harshith", "harshith123@gmail.com,sendWelcomeEmail");
+    </script>
