@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<script>
+let mypromise = new Promise((resolve, reject) => {
+    let success = true;
+    if (success) {
+        resolve();
+    } else {
+        reject();
+    }
+});
+
+mypromise.then(() => {
+    console.log("Success");
+    document.write("Success");
+}).catch(() => {
+    console.log("Failed");
+    document.write("Failed");
+});
+</script>
+
+</body>
+</html><!-- <script>
+      let mypromise = new Promise((resolve, reject) => {
+        let success = true;
+        if (success) {
+          resolve();
+        } else {
+          reject();
+        }
+      });
+
+      mypromise
+        .then(() => {
+          console.log("Success");
+          document.write("Success");
+        })
+        .catch(() => {
+          console.log("Failed");
+          document.write("Failed");
+        });
+    </script> -->
+    <script>
+      let pro = new Promise((resolve, reject) => {
+        resolve(5);
+      });
+      pro.then((result) => {
+        console.log(result);
+        setTimeout((pro) => {
+          console.log("success");
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>
+
