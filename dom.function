@@ -1,0 +1,42 @@
+get element by class name();
+returns all the elements having the same class name
+get element by class name () returns an html collection object
+an html collection is an array like list of html elements.
+the length property provides the size of collection
+getting elements by Tagname:
+get elements by tagname():
+--This method takes a tag name as string and 
+
+python,java
+conditional statements
+loops
+functions 
+query selector: can be used 
+
+Queryselectorall:
+-- it selects all the html elements by its class name and tag name 
+
+Manipulatingelements:
+To create HTML Elements:
+CreateElement()-create a new element
+-- method - document.createElement()
+
+textContent:
+<body>
+    <h1  id="a"class="a">om</h1>
+    <h1 id="b"class="b">namo</h2>
+    <h1 id="c"class="a"> shivaya</h1>
+    <h2 id="d"krishna><</h2>
+    <h1 class="a">vanisha</h1>
+    <!-- vanisha and meghana = red
+    sowjanya and navaneetha =blue -->
+    <script>
+        let x=document.getElementByTagName('a')
+        console.log(x)
+        for(let i=0; i<x.length;i++){
+            console.log(x[i])
+        }
+    </script>
+
+</body>
+</html>
