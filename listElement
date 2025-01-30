@@ -1,0 +1,39 @@
+<!-- <script>
+      let title;
+      for (let i = 0; i < 3; i++) {
+        title = document.createElement("h2");
+        title.className = "tt";
+        title.textContent = i;
+        console.log(title);
+      }
+    </script> -->
+    <!-- <script>
+        const titles=["vanisha","sowjanya","meghana"]
+        for(let i=0;i<titles.length;i++){
+        let title=document.createElement('h2');
+        title.className="aa"
+        title.textContent=titles[i]
+        console.log(title)
+        }
+    </script> -->
+    <h1>Removing child node</h1>
+    <h2>i am sowjanya</h2>
+    <ul>
+      <li>sai</li>
+      <li>nishu</li>
+      <li>sowjanya</li>
+    </ul>
+    <script>
+      const ul = document.querySelector("ul");
+      const lists = document.querySelectorAll("li");
+      for (const list of lists) {
+        console.log(`Removing: ${list.textContent}`);
+        ul.removeChild(list);
+      }
+    </script>
+    <script>
+        let n=document.createElement("h2")
+        n.textContent="saicharan"
+        let p=document.getElementById("b")
+        console.log(p.innerText)
+        p.appendchild(n)
