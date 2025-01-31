@@ -1,0 +1,26 @@
+<script>
+       <div id="c">
+      <h1>vanisha</h1>
+      <div id="a">
+        <h1>Ravi</h1>
+        <h1>Ram</h1>
+      </div>
+      <div id="b">
+        <h2>sam</h2>
+        <h2>venkat</h2>
+      </div>
+      </div>
+    </script>
+    <script>
+      let n = document.createElement("h1");
+      n.innerText = "Rahul";
+      let p = document.getElementById("a");
+      let l = document.getElementById("r");
+      let g = document.getElementById("c");
+      p.insertBefore(n, l);
+      let nn = document.createElement("h1");
+      nn.innerText="pavani"
+      let pp = document.getElementById("a");
+      let ll = document.getElementById("r");
+      p.insertBefore(nn, ll);
+    </script>
