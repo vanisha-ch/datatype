@@ -1,0 +1,63 @@
+import React from "react";
+
+function Greeting({ isLoggedIn }) {
+  if (isLoggedIn) {
+    return <h1>Welcome Back!</h1>;
+  } else {
+    return <h1>please login </h1>;
+  }
+}
+export default Greeting;
+import React from "react";
+import Greeting from "./Greeting";
+function App() {
+  const isLoggedIn = false;
+  return (
+    <div className="App">
+    <Greeting isLoggedIn={isLoggedIn} />
+    </div>
+  );
+}
+export default App;
+import react from 'react';
+const FruitList=()=>{
+    const fruits=['apple','cherry','orange'];
+    return(
+        <div>
+            <h1>FruitList</h1>
+            <ul>
+                {fruits.map((fruit,index)=>(
+                    <li key={index}>{fruit}</li>
+                ))}
+                </ul>
+        </div>
+    )
+}
+export default FruitList;
+lists and keys
+
+In react , a list is a collection of items you want to show on screen 
+
+# keys in react helps us to keep the track of items in a list
+
+-- react know which items you have changed ; updated
+
+
+
+
+
+map() :elements in array    function will be applied to all elements 
+
+
+
+
+
+const n=[1,2,3,4,5]
+
+const d =n.map(num =>num*2)
+
+console.log(d)
+
+# 2,4,6,8,10
+
+
