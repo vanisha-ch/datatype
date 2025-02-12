@@ -1,0 +1,17 @@
+import React from "react";
+import {memo} from 'react';
+const childb=({count , increment})=>{
+console.log("child b rendered")
+return(
+    <div>
+        <h1>Count:{count}</h1>
+        <button onClick={increment}>Increment</button>
+    </div>
+)
+}
+export default childb;
+const childA=()=>{
+    console.log("child A rendered")
+    return <h2>This is childA</h2>
+};
+export default childA;
