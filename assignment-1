@@ -1,0 +1,80 @@
+Assignement :
+Without using createcontext:
+import React from "react";
+
+function App() {
+  const name = "Thirmal";
+  const email = "2211cs010112@mallareddyuniversity.ac.in";
+
+  return <User1 name={name} email={email} />;
+}
+
+// User1 component
+function User1({ name, email }) {
+  return <User2 name={name} email={email} />;
+}
+
+// User2 component
+function User2({ name, email }) {
+  return <User3 name={name} email={email} />;
+}
+
+// User3 component
+function User3({ name, email }) {
+  return <User4 name={name} email={email} />;
+}
+
+// User4 component
+function User4({ name, email }) {
+  return (
+    <div>
+      <p>Name: {name}</p>
+      <p>Email: {email}</p>
+    </div>
+  );
+}
+
+export default App;
+ 
+
+Using usecreatecontext:
+import React, { createContext, useContext } from "react";
+const DataContext = createContext();
+
+function App() {
+  const name = "Thirmal";
+  const email = "2211cs010112@mallareddyuniversity.ac.in";
+
+  return (
+    <DataContext.Provider value={{ name, email }}>
+      <User1 />
+    </DataContext.Provider>
+  );
+}
+
+// User1 component
+function User1() {
+  return <User2 />;
+}
+
+// User2 component
+function User2() {
+  return <User3 />;
+}
+
+// User3 component
+function User3() {
+  return <User4 />;
+}
+
+// User4 component
+function User4() {
+  const { name, email } = useContext(DataContext);
+  return (
+    <div>
+      <h1>Name: {name}</h1>
+      <p>Email: {email}</p>
+    </div>
+  );
+}
+export default App;
