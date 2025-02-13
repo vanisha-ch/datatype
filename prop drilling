@@ -1,0 +1,65 @@
+import React,{createContext, useContext}from 'react';
+const DataContext = createContext();
+
+function App(){
+  const data="Hello I am sowjanya"
+  return(
+    <DataContext.Provider value={data}>
+<User1></User1>
+    </DataContext.Provider>
+  )
+}
+// user1 component
+function User1({data}){
+  return<User2 />
+}
+function User2({data}){
+  return<User3/>
+}
+function User3({data}){
+  return<User4 />
+}
+function User4(){
+  const data=useContext(DataContext)
+  return<div>{data}</div>
+}
+export default App;
+
+use context():
+props(properties) in react are used to pass data from parent component to child component
+
+prop drilling is the process of passing data from parent component to deeply(nested) child component through intermediate components, by passing data as props at each level 
+function App(){
+  const data ="Hello I am Abhi"
+  return(
+    <div>
+      <User1 data={data}/>
+      </div>
+  );
+};
+
+///user1 component
+function User1({data}){
+  return<User2 data={data}/>
+}
+
+///user2 component
+function User2({data}){
+  return<User3 data={data}/>
+}
+///user3 component
+function User3({data}){
+  return<User4 data={data}/>
+}
+///user4 component
+function User4({data}){
+  return <div>{data}</div>
+}
+
+export default App;
+
+React Use Context:
+--create a Context :
+1.use prop Drilling to pass the data from app to profile
+2.use React Context to pass the data directly to profile without 
+going through each component
