@@ -1,0 +1,141 @@
+import React, { useReducer } from "react";
+import "./App.css"; // Import CSS file
+
+function appleReducer(state = 3, action) {
+  switch (action.type) {
+    case "ADD_APPLE":
+      return state + 1;
+    case "EAT_APPLE":
+      return state > 0 ? state - 1 : state; // Prevent negative apples
+    default:
+      return state;
+  }
+}
+
+function App() {
+  const [state, dispatch] = useReducer(appleReducer, 3);
+
+  return (
+    <div className="container">
+      <h1>🍏 Apple Counter 🍏</h1>
+      <p className="count">Number of apples: {state}</p>
+      <div className="buttons">
+        <button className="add" onClick={() => dispatch({ type: "ADD_APPLE" })}>
+          ADD APPLE
+        </button>
+        <button
+          className="eat"\
+import React, { useState } from 'react';
+import Child from './Child';
+
+const Parent = () => {
+  const [message, setMessage] = useState('hello world');
+
+  const changeMessage = () => {
+    setMessage('New message from Parent');
+  };
+
+  return (
+    <div>
+      <h1>{message}</h1>
+      {/* Passing the changeMessage function as a prop to the Child component */}
+      <Child changeMessage={changeMessage} />
+    </div>
+  );
+};
+
+export default Parent;
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7f7f7;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  color: #af4c4e;
+}
+
+.count {
+  font-size: 24px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add {
+  background-color: #af4c4c;
+  color: white;
+}
+
+.eat {
+  background-color: #f44336;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+--call back in react
+-- in react , a call back is function that is passed as an argument
+to another function
+--call backs are often to communicate with different components
+ex: A parent component passing as  a callback to a child 
+--parent component displays a message; and child components
+has a button
+when the button is clicked , the child will use call back 
+and tells the parent component to update the msg
+React Reducer();
+A Reducer is a function that helps to update (like score ,a list)
+based on action we take 
+--1)current State : The current value of a state 
+2) Action:
+3) Example:
+Action : add or remove an item
+State: inital value (3 items) #
+-- Tracking apples:
+
+
+
+          onClick={() => dispatch({ type: "EAT_APPLE" })}
+          disabled={state === 0}
+        >
+          EAT APPLE
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default App;
