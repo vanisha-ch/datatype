@@ -1,0 +1,86 @@
+import React, { useReducer } from "react";
+import "./App.css"; // Import CSS file
+
+function appleReducer(state, action) {
+  switch (action.type) {
+    case "ADD_APPLE":
+      return [...state, "🍎"];
+    case "EAT_APPLE":
+      return state.length > 0 ? state.slice(0, -1) : state; // Prevent negative apples
+    default:
+      return state;
+  }
+}
+
+function App() {
+  const [apples, dispatch] = useReducer(appleReducer, ["🍎", "🍎", "🍎"]);
+
+  return (
+    <div className="container">
+      <h1>🍎 Apple Counter 🍎</h1>
+      <p className="count">
+        {apples.map((apple, index) => (
+          <span key={index}>
+            <img key={index} src="/apple.jpg" alt="Apple" className="apple" />
+            {apple}
+          </span>
+        ))}
+      </p>
+      <div className="buttons">
+        <button className="add" onClick={() => dispatch({ type: "ADD_APPLE" })}>
+          ADD APPLE
+        </button>
+        <button
+          className="eat"
+          onClick={() => dispatch({ type: "EAT_APPLE" })}
+          disabled={apples.length === 0}
+        >
+          EAT APPLE
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+import React,{useState,useEffect,useRef}from 'react'
+
+function counterWithPrev(){
+  const [count,setCount]=useState(0);
+  const prevCountRef=useRef();
+  //create a ref to store the previous
+
+  useEffect(()=>{
+    prevCountRef.current=count;
+  },[count])
+  return(
+    <div>
+      <p >current count:{count}</p>
+      <p>prevCount :{prevCountRef.current}</p>
+      <button onClick={()=>setCount(count+1)}>Increment</button>
+    </div>
+    
+  )
+
+  
+}
+export default counterWithPrev;
+useRef:
+
+use State:--change the state; React will render the component and update the ui with the new element
+
+
+useRef: changing the value by using useRed doesnot re-render;
+stays the same even the value is updated
+
+use ref : when you change the value stored in ref.current.
+it doesnot make the component render
+this is useful when you need to store values or interact with Dom elements with out extra renders
+
+commonly used:
+1) Accessing a Dom element : like scrolling to screen 
+focusing the input 
+# login from search zoom updated 
+2)storing values : keep track of values that don't need to update 
+the UI but need to remembered the previous state
+
