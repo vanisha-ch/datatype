@@ -1,0 +1,204 @@
+function App(){
+  const handleClick =()=>
+    alert("Button Clicked")
+};
+return(
+  <button OnClick={handleClick}>Click Me</button>
+)
+
+export default App;
+import React,{useState}from 'react'
+function App(){
+  const[text,setText]=useState=("")
+  //initally the value of set as empty string
+  const handlechange=(event)=>{
+    setText(event.target.value)
+    //update the text state with the value input filed
+    
+  }
+import React, { useState } from 'react';
+
+function App() {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  return (
+    <div>
+      <button
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        style={{
+          backgroundColor: isHovered ? 'lightgrey' : 'lightblue',
+          color: isHovered ? 'black' : 'white',
+        }}
+      >Hover me</button>
+    </div>
+  );
+}
+
+import React, { useState } from 'react';
+
+
+
+function App() {
+
+  const [text, setText] = useState(""); // Correct useState syntax
+
+
+
+  const handleChange = (event) => {
+
+    setText(event.target.value); // Update state with input value
+
+  };
+
+
+
+  return (
+
+    <div>
+
+      <input type="text" value={text} onChange={handleChange} />
+
+      <p>Entered Text: {text}</p>
+
+    </div>
+
+  );
+
+}
+
+
+
+export default App;
+Event handling in React:
+
+Is how you make your app do something when the user interacts with it,
+Like clicking a button, submitting a form
+1)	Click a button (onClick)
+2)	Pressing a key(keyDown)
+3)	Moving the mouse(onChange)
+4)	Typing a text box(onChange)
+How to use events in react:
+--Use camelCase for event names
+--Pass a function to the event this function will run when the event happens
+a)click event (onClick)
+import React from 'react';
+function App(){
+  const handleClick=()=>{
+    alert("Button click");
+  }
+  return(
+    <button onClick={handleClick}>Click me</button>
+  )
+  
+}
+export default App;
+change event (on change);
+This happens when you type in a text box
+KEY POINTS
+Target is a property of the event object, and is predefined by javascript for Dom events
+event.target : always refers the element that triggered the event
+import React, { useState } from 'react';
+
+
+
+function App() {
+
+  const [text, setText] = useState(""); // Correct useState syntax
+
+
+
+  const handleChange = (event) => {
+
+    setText(event.target.value); // Update state with input value
+
+  };
+
+
+
+  return (
+
+    <div>
+
+      <input type="text" value={text} onChange={handleChange} />
+
+      <p>Entered Text: {text}</p>
+
+    </div>
+
+  );
+
+}
+
+
+
+export default App;
+
+
+
+
+
+
+
+3)Mouse Events:(onMouseEnter, onMouse Leave)
+These happens when we move the mouse over or away from the elements
+import React, { useState } from 'react';
+
+function App() {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  return (
+    <div>
+      <button
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        style={{
+          backgroundColor: isHovered ? 'lightgrey' : 'lightblue',
+          color: isHovered ? 'black' : 'white',
+        }}
+      >Hover me</button>
+    </div>
+  );
+}
+
+export default App;
+Event Handling in React 
+-- Event handling  in react is how you make your app do something when the user interact with it,
+like clicking a button ,submitting a form 
+1) clicking a button (onClick)
+2) pressing a key(keyDown)
+3) Moving the mouse(on mouseMove)
+4) Typing a text box(onChange)
+--How to use Events in React
+-- Use camelCase for event names
+-- pass a function to the event(not to a function call).
+change event (on change);
+forms:
+This happens when you type in a text box
+KEY POINTS
+Target is a property of the event object, and is predefined by javascript for Dom events
+event.target : always refers the element that triggered the event
+event.target value: it used to create the forms
+
+3) Mouse Events(on MouseEnter , OnMouse Leave)
+
+
+export default App;
+
+}
